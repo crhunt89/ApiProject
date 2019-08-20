@@ -11,7 +11,7 @@ searchForm.addEventListener('submit', function (e) {
             return result.json();
         })
         .then(json => {
-            // console.log(json)
+            console.log(json)
             displayResults(json);
         })
     e.preventDefault();
@@ -45,7 +45,7 @@ function displayResults(json) {
                 img.alt = 'https://rickandmortyapi.com';
                 console.log(current.image);
             }
-
         }
     }
 };
+

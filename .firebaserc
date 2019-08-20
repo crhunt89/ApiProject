@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "rickandmortydeadoralive"
+    "default": "rickandmortydeadoralive",
+    "Rick and Morty Dead or Alive": "rickandmortydeadoralive"
   }
 }

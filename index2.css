@@ -3,7 +3,7 @@ body{
     font-family: 'Notable', sans-serif;
 }
 .jumbotron {
-    background-image: url(../Portfolio/Assets/rickAndMorty.jpg);
+    background-image: url(./Assets/rickAndMorty.jpg);
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
