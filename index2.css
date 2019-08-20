@@ -1,0 +1,31 @@
+body{
+    background-color: #35c9dd;
+    font-family: 'Notable', sans-serif;
+}
+.jumbotron {
+    background-image: url(../Portfolio/Assets/rickAndMorty.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    background-color: #35c9dd;
+    margin-bottom: 0;
+}
+.display-4 {
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+.lead {
+    font-weight: 400;
+    text-align: center;
+    color: black;    
+}
+section {
+    text-align: center;
+}
+.btn-outline-success {
+    color: #f0e14a;
+    border-color: #44281d;
+}
+
+

@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>What's for Dinner</title>
-    <link href="index.css" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index2.css">
     <link href="https://fonts.googleapis.com/css?family=Notable|Vollkorn&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h1>What's for Dinner!! Recipe search</h1>
-
-    <div class="wrapper">
-      <div class="controls">
-        <!--Search Form-->
-        <form>
-          <p>
-            <label for="search">What ingredient do you want to use?: </label>
-            <input type="text" id="search" class="search" required>
-          </p>
-          <p>
-            <button class="submit">Submit</button>
-          </p>
-        </form>
+    <title>Rick and Morty Dead or Alive</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Rick and Morty</h1>
+          <p class="lead">Dead or Alive.</p>
+        </div>
       </div>
-      <!--Results Section-->
+      <nav class="navbar navbar-light" style="background-color: #97ce4c">
+        <a class="navbar-brand">Who are you looking for??</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" value="" required>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
       <div class="results">
-        <!--Results Navigation-->
-        <nav>
-          <button class="prev">Previous 10</button>
-          <button class="next">Next 10</button>
-        </nav>
         <!--Results From Request-->
         <section>
-
+  
         </section>
-      </div>
+        <nav aria-label="Search Results Pages">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
     </div>
-    <script type="text/javascript" src="recipe.js"></script>
-  </body>
+
+
+    
+    <script type="text/javascript" src="deadOrAlive2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>
