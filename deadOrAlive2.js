@@ -1,22 +1,30 @@
-
-let section = document.querySelector('section')
+const baseURL = "https://rickandmortyapi.com/api/character/";
+let section = document.querySelector('section');
 let searchForm = document.querySelector('form');
-let pageNumber = 0;
+let url;
+let pageNumber = 1;
 let displayNav = false;
-
-searchForm.addEventListener('submit', function (e) {
-    let searchTerm = document.querySelector('.form-control').value;
-    fetch('https://rickandmortyapi.com/api/character/?name=' + searchTerm)
-        .then(result => {
-            return result.json();
-        })
-        .then(json => {
-            console.log(json)
-            displayResults(json);
-        })
+let searchTerm = document.querySelector('.form-control');
+searchForm.addEventListener('submit',submitSearch); 
+    
+function submitSearch(e){
+    pageNumber = 1;
+    fetchResults(e);
+  }
+  function fetchResults(e) { 
     e.preventDefault();
-});
+    url = baseURL + '?name=' + searchTerm.value + '&page=' + pageNumber; 
+    fetch(url).then(function(result) {
+      return result.json();
+    }).then(function(json) {
+      displayResults(json);
+    });
+  }
+
 function displayResults(json) {
+    while (section.firstChild) {
+        section.removeChild(section.firstChild);
+    }
     let results = json.results;
     if (results.length === 0) {
         let par = document.createElement('p')
@@ -30,16 +38,16 @@ function displayResults(json) {
             let para2 = document.createElement('p');
             let current = results[i];
             console.log(current.status);
-            let status = current.status
-            let name = current.name
+            let status = 'Status:' + ' ' + current.status
+            let name = 'Name:'+ ' ' + current.name
             para2.textContent = status;
             console.log(name);
             para1.textContent = name;
             div.setAttribute('class', 'searchResults');
+            div.appendChild(img);
             div.appendChild(para1);
             div.appendChild(para2);
             section.appendChild(div);
-            div.appendChild(img);
             if (typeof current.image != 'undefined') {
                 img.src = current.image;
                 img.alt = 'https://rickandmortyapi.com';
@@ -48,4 +56,19 @@ function displayResults(json) {
         }
     }
 };
-
+    let next = document.querySelector('#next');
+    let previous = document.querySelector('#previous');
+    next.addEventListener('click', nextPage);
+    previous.addEventListener('click', prevPage);
+    function nextPage(e) {
+        pageNumber++;
+        fetchResults(e);
+    };
+    function prevPage(e) {
+        if (pageNumber > 0) {
+            pageNumber--;
+        } else {
+            return;
+        }
+        fetchResults(e);
+    };

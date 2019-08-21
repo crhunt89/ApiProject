@@ -1,14 +1,58 @@
 body{
     background-color: #35c9dd;
     font-family: 'Notable', sans-serif;
+    background-image: url(./Assets/background2.jpg);
+    background-size: 100%;
+}
+.dancingRick {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 20%;
+  }
+.dancingRick2 {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    right: 20%;
+  }
+.poopy {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    right: 10%;
+}
+.pickle {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+}
+.pals {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 30%;
+}
+.drunk {
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    right: 30%;
 }
 .jumbotron {
     background-image: url(./Assets/rickAndMorty.jpg);
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
-    background-color: #35c9dd;
+    background-color: black;
     margin-bottom: 0;
+}
+.navbar {
+    background-color: black;
+}
+.navbar-light .navbar-brand{
+    color: #f0e14a;
 }
 .display-4 {
     font-weight: 400;
@@ -22,10 +66,15 @@ body{
 }
 section {
     text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
 }
 .btn-outline-success {
     color: #f0e14a;
     border-color: #44281d;
 }
-
-
+p {
+    color: #f0e14a;
+    font-weight: 400;
+}
