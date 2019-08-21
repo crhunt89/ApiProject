@@ -2,7 +2,8 @@ body{
     background-color: #35c9dd;
     font-family: 'Notable', sans-serif;
     background-image: url(./Assets/background2.jpg);
-    background-size: 100%;
+    /* background-size: 100%; */
+    min-height: 100%;
 }
 .dancingRick {
     height: 150px;
@@ -76,5 +77,10 @@ section {
 }
 p {
     color: #f0e14a;
-    font-weight: 400;
+    font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
