@@ -63,12 +63,14 @@ function displayResults(json) {
     function nextPage(e) {
         pageNumber++;
         fetchResults(e);
+        scroll(0,0);
     };
     function prevPage(e) {
-        if (pageNumber > 0) {
+        if (pageNumber > 1) {
             pageNumber--;
         } else {
             return;
         }
         fetchResults(e);
+        scroll(0,0);
     };
