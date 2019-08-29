@@ -6,7 +6,7 @@ let pageNumber = 1;
 let displayNav = false;
 let searchTerm = document.querySelector('.form-control');
 searchForm.addEventListener('submit',submitSearch); 
-    
+
 function submitSearch(e){
     pageNumber = 1;
     fetchResults(e);
@@ -74,3 +74,7 @@ function displayResults(json) {
         fetchResults(e);
         scroll(0,0);
     };
+    function playAudio(url) {
+        let a = new Audio(url);
+        a.play();
+    }

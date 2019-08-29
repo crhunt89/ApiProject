@@ -23,7 +23,7 @@
     <span class="navbar-brand mb-0 h1">Who are you looking for??</span>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search" value="">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0"  onclick= "playAudio('./Assets/mrMeeseeks.mp3')"type="submit">Search</button>
     </form>
   </nav>
   <div class="results">
@@ -34,10 +34,10 @@
     <nav aria-label="Search Results Pages">
       <ul class="pagination justify-content-center">
         <li class="page-item">
-          <a class="page-link" id="previous" href="" tabindex="-1">Previous</a>
+          <a class="page-link" id="previous" href="" onclick="playAudio('./Assets/wubba_lubba_dub_dub.mp3')" tabindex="-1">Previous</a>
         </li>
         <li class="page-item">
-          <a class="page-link" id="next" href="">Next</a>
+          <a class="page-link" id="next" href="" onclick="playAudio('./Assets/wubba_lubba_dub_dub.mp3')">Next</a>
         </li>
       </ul>
     </nav>
